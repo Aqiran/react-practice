@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+*{
+  margin: auto;
+  font-family: "Josefin Sans";
+
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+.navbar h1 {
+  color: #023c46;
+}
+.navbar .links {
+  margin: 2px 2px;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+  opacity: 0.8;
+  border: #f1356d;
+  border-style: solid;
+  box-shadow: 1px 3px 5px #460240; 
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+h1{
+  color: aquamarine;
+  font-style: italic;
+  border: chartreuse;
+  margin-left: 0px;
 }
+
+.food{
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+}
+
+.preview{
+  font-style: oblique;
+  margin: 20px 10px;
+  color: #aa0e7b;
+  display: inline-block;
+  
+}
+.preview:hover{
+  box-shadow: 0 0 5px #460240;
+  border-style: outset; 
+}
+
