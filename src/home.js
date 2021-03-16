@@ -2,18 +2,17 @@ import { useState } from 'react'
 import Bloglist from './Bloglist';
 const Home = () => {                                                //use sfc to create func comp
    
-    /*const customStyle={                                       //INLINE STYLE
-        margin: "20px 0",
-        color: "#f1356d",
-        borderStyle:"outset"   
-    }*/
-    
-
-    const [blogs, setBlogs] = useState([                              //for using hooks must import from react
+ const [blogs, setBlogs] = useState([                              //for using hooks must import from react
         { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
         { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }  //create destructured array that contains item to change and setItemname
     ])
+
+    const handledelete=(id)=>{
+        const newblogs=blogs.filter(items=> items.id !== id );
+        setBlogs(newblogs);
+    }
+
     const fname = "Aquila";
     const lname = "peeran"
     const date = new Date();
@@ -43,7 +42,7 @@ const Home = () => {                                                //use sfc to
                         </div>
                     ))*/
                         <div>                  
-                    <Bloglist blogs={blogs} title="ALL BLOGS" />
+                    <Bloglist blogs={blogs} title="ALL BLOGS" handledelete={handledelete} />
                     <br/>
                     <Bloglist blogs={blogs.filter((items)=>items.author==='mario')} title="Mario's BLOGS" />
                         </div>
